@@ -1,13 +1,12 @@
 class Element {
   constructor(attrs, tag = 'div') {
     this.elem = document.createElement(tag)
-    this.attrs = attrs
-    this.addAttributes()
+    this.addAttributes(attrs)
   }
 
-  addAttributes() {
-    for (let attr in this.attrs) {
-      this.elem.setAttribute(attr, this.attrs[attr])
+  addAttributes(attrs) {
+    for (let attr in attrs) {
+      this.elem.setAttribute(attr, attrs[attr])
     }
   }
 }

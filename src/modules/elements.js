@@ -9,6 +9,10 @@ class Element {
       this.elem.setAttribute(attr, attrs[attr])
     }
   }
+
+  setText(text) {
+    this.elem.innerText = text
+  }
 }
 
 export { Element }

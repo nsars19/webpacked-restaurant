@@ -2,7 +2,7 @@
   background-image: linear-gradient(to bottom, rgba(231, 112, 15, 0.3), rgba(214, 104, 13, 0.1) 20%, transparent 25%), linear-gradient(to top, rgba(231, 112, 15, 0.2), rgba(214, 104, 13, 0.1) 20%, transparent 25%), url("../../src/assets/tacos.png");
   background-position: center;
   background-size: contain;
-  color: #eee;
+  color: #f1f1f1;
   text-shadow: 2px 2px 2px black;
   letter-spacing: 9px;
   place-items: center;
@@ -51,31 +51,35 @@
 }
 
 .main-container {
-  background: #222;
-  color: #ddd;
+  background: #892d1b;
+  color: #f1f1f1;
 }
 .main-container .about {
   font-size: 4em;
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 25px;
 }
 .main-container .blurb {
   font-size: 1.6em;
-  margin: 40px;
+  line-height: 1.45em;
+  padding-top: 20px;
   padding-bottom: 30px;
-  padding-left: 15%;
-  padding-right: 15%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .main-container .blurb {
-    padding: 0 10%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 @media (max-width: 540px) {
   .main-container .blurb {
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 1.3em;
+    letter-spacing: 0.3px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
@@ -89,7 +93,7 @@
 }
 
 body {
-  background: #222;
+  background: #892d1b;
 }
 
 /*# sourceMappingURL=main.css.map */

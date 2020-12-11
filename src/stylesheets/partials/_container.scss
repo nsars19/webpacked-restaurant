@@ -1,0 +1,31 @@
+.main-container {
+  background: #222;
+  color: #ddd;
+
+  .about {
+    font-size: 4em;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  .blurb {
+    font-size: 1.6em;
+    margin: 40px;
+    padding-bottom: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  @media (max-width: 768px) {
+    .blurb {
+      padding: 0 10%;
+    }
+  }
+  @media (max-width: 540px) {
+    .blurb {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}

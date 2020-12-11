@@ -15,4 +15,7 @@ export class Element {
   }
 }
 
+const appendTo = (parent, child) => parent.appendChild(child)
+const $ = elem => document.querySelector(elem)
 
+export { appendTo, $ }

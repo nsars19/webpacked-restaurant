@@ -1,4 +1,4 @@
-class Element {
+export class Element {
   constructor(attrs, tag = 'div') {
     this.elem = document.createElement(tag)
     this.addAttributes(attrs)
@@ -15,4 +15,4 @@ class Element {
   }
 }
 
-export { Element }
+

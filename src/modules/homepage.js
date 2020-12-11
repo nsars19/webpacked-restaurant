@@ -1,6 +1,8 @@
 import { Element } from './elements';
 
-const homePage = (() => {
+const homePage = () => {
+  const appendTo = (parent, child) => parent.appendChild(child)
+
   const content = document.getElementById("content")
 
   const header = new Element({

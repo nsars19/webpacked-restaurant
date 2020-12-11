@@ -29,9 +29,9 @@ const homePage = () => {
 
   // Menu & Menu Items
   const mainMenu = new Element({class: 'main-menu'}, 'nav')
-  const menuHome = new Element({class: 'home'}, 'span')
-  const menuMenu = new Element({class: 'menu'}, 'span')
-  const menuContact = new Element({class: 'contact'}, 'span')
+  const menuHome = new Element({class: 'home', "data-active": true}, 'span')
+  const menuMenu = new Element({class: 'menu', "data-active": false}, 'span')
+  const menuContact = new Element({class: 'contact', "data-active": false}, 'span')
 
   menuHome.setText("Home")
   menuMenu.setText("Menu")

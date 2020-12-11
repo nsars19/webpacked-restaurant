@@ -1,0 +1,31 @@
+.main-menu {
+  // margin-top: 2px;
+  display: flex;
+  justify-content: flex-start;
+  
+  span {
+    flex: 0 1 150px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-align: center;
+    background: #5f1709;
+    padding: 15px 0px;
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    span {
+      flex-grow: 1;
+    }
+  }
+
+  span[data-active="false"] {
+    &:hover,
+    &:active {
+      background: #892d1b
+    }
+  }
+  span[data-active="true"] {
+    background: #892d1b;
+  }
+}

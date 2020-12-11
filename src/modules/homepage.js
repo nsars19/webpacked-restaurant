@@ -1,9 +1,7 @@
-import { Element } from './elements';
+import { Element, appendTo, $ } from './elements';
 
 const homePage = () => {
-  const appendTo = (parent, child) => parent.appendChild(child)
-
-  const content = document.getElementById("content")
+  const content = $("#content")
 
   // Header & header children
   const header = new Element({

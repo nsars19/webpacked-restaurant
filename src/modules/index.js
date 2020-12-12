@@ -1,4 +1,3 @@
-import { container } from 'webpack'
 import homePage from './homepage'
 import { contactPage, menuPage } from './pages'
 

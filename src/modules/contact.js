@@ -21,7 +21,7 @@ export const contactPage = () => {
   address.setText("285 Boulevard Rd")
 
   // -- hours
-  const hoursContainer = new Element({class: hours-container}, 'div')
+  const hoursContainer = new Element({class: 'hours-container'}, 'div')
   const hoursHeader = new Element({class: 'hours-header'}, 'h2')
   const hours = new Element({class: 'hours'}, 'div')
 
@@ -29,15 +29,15 @@ export const contactPage = () => {
   hours.setText("Tues - Thu\n 10a - 11p\n\nFri - Sun\n10a - 1a")
 
   let layout = [
-    [container, phoneNumberContainer],
-    [phoneNumberContainer, phoneHeader],
-    [phoneNumberContainer, phoneNumber],
-    [container, addressContainer],
-    [addressContainer, addressHeader],
-    [addressContainer, address],
-    [container, hoursContainer],
-    [hoursContainer, hoursHeader],
-    [hoursContainer, hours],
+    [container, phoneNumberContainer.elem],
+    [phoneNumberContainer.elem, phoneHeader.elem],
+    [phoneNumberContainer.elem, phoneNumber.elem],
+    [container, addressContainer.elem],
+    [addressContainer.elem, addressHeader.elem],
+    [addressContainer.elem, address.elem],
+    [container, hoursContainer.elem],
+    [hoursContainer.elem, hoursHeader.elem],
+    [hoursContainer.elem, hours.elem],
   ]
 
   layout.forEach(elem => appendTo(elem[0], elem[1]))

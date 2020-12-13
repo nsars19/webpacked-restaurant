@@ -42,21 +42,37 @@ const homePage = () => {
   mainAbout.setText("About")
   mainBlurb.setText("A staple in the region since 1984, Bean's burritos is the place to get your fill of south-of-the-border, north-of-the-border. Nothing quite says 'olé' like a Bean's burrito!\n\nBean's burritos was opened in 1984 by Bobby 'Beans' Sacamacci. He spent much of his life looking for the best burritos he could find, and was left, well, unfulfilled. He figured he could do better than the competition, and we're inclined to agree!")
 
-  const layout = [
-    [content, header.elem], 
-    [header.elem, restaurantInfoContainer.elem],
-    [restaurantInfoContainer.elem, h1Name.elem],
-    [restaurantInfoContainer.elem, h3Tagline.elem],
-    [content, mainContainer.elem],
-    [mainContainer.elem, mainMenu.elem],
-    [mainMenu.elem, menuHome.elem],
-    [mainMenu.elem, menuMenu.elem],
-    [mainMenu.elem, menuContact.elem],
-    [mainContainer.elem, mainAbout.elem],
-    [mainContainer.elem, mainBlurb.elem],
-  ]
-  
-  layout.forEach(pair => appendTo(pair[0], pair[1]))
+  const defaultView = () => {
+    const layout = [
+      [content, header.elem], 
+      [content, mainMenu.elem],
+      [content, mainContainer.elem],
+      [header.elem, restaurantInfoContainer.elem],
+      [restaurantInfoContainer.elem, h1Name.elem],
+      [restaurantInfoContainer.elem, h3Tagline.elem],
+      [mainMenu.elem, menuHome.elem],
+      [mainMenu.elem, menuMenu.elem],
+      [mainMenu.elem, menuContact.elem],
+      [mainContainer.elem, mainAbout.elem],
+      [mainContainer.elem, mainBlurb.elem],
+    ]
+
+    layout.forEach(pair => appendTo(pair[0], pair[1]))
+  }
+
+  const homeView = () => {
+    const layout = [
+      [mainContainer.elem, mainAbout.elem],
+      [mainContainer.elem, mainBlurb.elem],  
+    ]
+
+    layout.forEach(pair => appendTo(pair[0], pair[1]))
+  }
+
+  return {
+    defaultView,
+    homeView,
+  }
 }
 
 export default homePage 

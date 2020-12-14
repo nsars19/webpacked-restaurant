@@ -2,10 +2,10 @@ import { Element, appendTo, $ } from './elements'
 
 export const contactPage = () => {
   const container = $(".main-container")
-  
+  const contactContainer = new Element({class: 'contacts'}, 'div')
   // Contact info
   // -- telephone 
-  const phoneNumberContainer = new Element({class: 'phoneContainer'}, 'div')
+  const phoneNumberContainer = new Element({class: 'phone-container'}, 'div')
   const phoneHeader = new Element({class: 'phone-header'}, 'h2')
   const phoneNumber = new Element({class: 'phone-number'}, 'div')
 
@@ -29,13 +29,14 @@ export const contactPage = () => {
   hours.setText("Tues - Thu\n 10a - 11p\n\nFri - Sun\n10a - 1a")
 
   let layout = [
-    [container, phoneNumberContainer.elem],
+    [container, contactContainer.elem],
+    [contactContainer.elem, phoneNumberContainer.elem],
     [phoneNumberContainer.elem, phoneHeader.elem],
     [phoneNumberContainer.elem, phoneNumber.elem],
-    [container, addressContainer.elem],
+    [contactContainer.elem, addressContainer.elem],
     [addressContainer.elem, addressHeader.elem],
     [addressContainer.elem, address.elem],
-    [container, hoursContainer.elem],
+    [contactContainer.elem, hoursContainer.elem],
     [hoursContainer.elem, hoursHeader.elem],
     [hoursContainer.elem, hours.elem],
   ]

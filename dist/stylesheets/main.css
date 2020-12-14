@@ -108,6 +108,22 @@
   }
 }
 
+.contacts {
+  margin-top: 35px;
+  text-align: center;
+}
+.contacts > * {
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+.contacts h2 {
+  font-size: 1.8em;
+  padding-bottom: 7px;
+}
+.contacts div {
+  font-size: 1.3em;
+}
+
 *,
 ::before,
 ::after {

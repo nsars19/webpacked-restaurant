@@ -17,37 +17,25 @@ function main() {
   const addActiveStatus = elem => elem.setAttribute('data-active', true)
 
   const menuItems = {
-    home:    $('.home'), 
-    menu:    $('.menu'), 
-    contact: $('.contact')
+    home:    {elem: $('.home'), loadView: home.homeView}, 
+    menu:    {elem: $('.menu'), loadView: menuPage}, 
+    contact: {elem: $('.contact'), loadView: contactPage}
   }
 
   const clearMenuItemsActiveStatus = () => {
     for (let item in menuItems) {
-      clearActiveStatus(menuItems[item])
+      clearActiveStatus(menuItems[item].elem)
     }
   }
 
-  $('.home').addEventListener('click', () => {
-    clearMenuItemsActiveStatus()
-    clearContainer($('.main-container'))
-    home.homeView()
-    addActiveStatus(menuItems.home)
-  })
-
-  $('.contact').addEventListener('click', () => {
-    clearMenuItemsActiveStatus()
-    clearContainer($(".main-container"))
-    contactPage()
-    addActiveStatus(menuItems.contact)
-  }) 
-
-  $('.menu').addEventListener('click', () => {
-    clearMenuItemsActiveStatus()
-    clearContainer($('.main-container'))
-    menuPage()
-    addActiveStatus(menuItems.menu)
-  })
+  for (let item in menuItems) {
+    menuItems[item].elem.addEventListener('click', () => {
+      clearMenuItemsActiveStatus()
+      clearContainer($('.main-container'))
+      menuItems[item].loadView()
+      addActiveStatus(menuItems[item].elem)
+    })
+  }
 }
 
 main()

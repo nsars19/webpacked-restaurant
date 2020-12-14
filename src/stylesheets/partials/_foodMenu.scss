@@ -1,0 +1,37 @@
+.menu-container {
+  text-align: center;
+  margin-top: 45px;
+  display: grid;
+  justify-items: center;
+
+  .burrito::before { content: 'Burritos'; }
+  .taco::before { content: 'Tacos'; }
+  
+  .section {
+    margin-bottom: 20px;
+    &::before {
+      font-size: 2.4em;
+      font-weight: bold;
+    }
+
+    .item-header {
+      font-size: 1.50em;
+    }
+    .item-desc {
+      font-size: 1.2em;
+      padding: 0 20px;
+      margin-bottom: 8px;
+    }
+
+    [class*="-item"] {
+      margin: 10px;
+      max-width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      &::before { font-size: 2.2em; }
+      .item-header { font-size: 1.30em; }
+      .item-desc { font-size: 1.18em; }
+    }
+  }
+}

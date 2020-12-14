@@ -108,6 +108,49 @@
   }
 }
 
+.menu-container {
+  text-align: center;
+  margin-top: 45px;
+  display: grid;
+  justify-items: center;
+}
+.menu-container .burrito::before {
+  content: "Burritos";
+}
+.menu-container .taco::before {
+  content: "Tacos";
+}
+.menu-container .section {
+  margin-bottom: 20px;
+}
+.menu-container .section::before {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+.menu-container .section .item-header {
+  font-size: 1.5em;
+}
+.menu-container .section .item-desc {
+  font-size: 1.2em;
+  padding: 0 20px;
+  margin-bottom: 8px;
+}
+.menu-container .section [class*=-item] {
+  margin: 10px;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .menu-container .section::before {
+    font-size: 2.2em;
+  }
+  .menu-container .section .item-header {
+    font-size: 1.3em;
+  }
+  .menu-container .section .item-desc {
+    font-size: 1.18em;
+  }
+}
+
 .contacts {
   margin-top: 35px;
   text-align: center;

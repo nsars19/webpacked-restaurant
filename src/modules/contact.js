@@ -26,7 +26,7 @@ export const contactPage = () => {
   const hours = new Element({class: 'hours'}, 'div')
 
   hoursHeader.setText("hours")
-  hours.setText("Tues - Thu\n 10a - 11p\n\nFri - Sun\n10a - 1a")
+  hours.setText("Tues - Thu\n 10a - 11p\nFri - Sun\n10a - 1a")
 
   let layout = [
     [container, contactContainer.elem],
